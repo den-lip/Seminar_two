@@ -1,0 +1,25 @@
+// Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+int ReadInt (string messerge)
+{
+    Console.Write ( messerge);
+    string InputedStr  = Console.ReadLine ();
+    int number = Convert. ToInt32 (InputedStr);
+    return number;
+}
+int num1 = ReadInt ("Введите трехзначное число");
+bool check (int number)
+
+{
+    if (100<= number && number  <=1000)
+    { 
+        return true;
+    }
+    Console.WriteLine ("Число не трехзначное");
+    return false;
+}
+
+if (check(num1))
+{
+    int secondDigit = num1 / 10 % 10;
+}
+Console.WriteLine ($"Последняя цифра числа" + num1 + " равна " + secondDigit);
