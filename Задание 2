@@ -1,0 +1,34 @@
+// Задача 2: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+int ReadInt (string messerge)
+{
+    Console.Write ( messerge);
+    string InputedStr  = Console.ReadLine ();
+    int number = Convert. ToInt32 (InputedStr);
+    return number;
+}
+
+int thirdRank (int number)
+
+{
+    while (number > 100); 
+    { number /= 10;
+    }
+    return number %10;
+}
+
+bool check (int number)
+
+{
+    if (number <100)
+    { 
+        return true;
+    }
+    Console.WriteLine ("В числе нет трех цифр");
+    return false;
+}
+int num1 = ReadInt ("Введите трехзначное число");
+if (check(num1))
+{
+    int thirdDigit = num1 / 10 % 10;
+}
+Console.WriteLine ("Последняя цифра числа" + num1 + " равна " + thirdDigit);
