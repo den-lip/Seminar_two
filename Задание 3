@@ -1,0 +1,35 @@
+// Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+int ReadInt (string messerge)
+{
+    Console.Write ( messerge);
+    string InputedStr  = Console.ReadLine ();
+    int number = Convert. ToInt32 (InputedStr);
+    return number;
+}
+bool IsWeekend (int weekDay)
+{
+    if (weekDay > 5)
+    {
+        return true;
+    }
+    return false;
+}
+bool Weekday (int number)
+{
+    if (number > 0 && number <=5 )
+    {
+        return true;
+    }
+    Console.WriteLine ("Нет такого дня!");
+    return false;
+}
+int weekDay = ReadInt("Введите день недели");
+if (Weekday (weekDay))
+{
+    Console.WriteLine ("Выходной");
+}
+else
+{
+    System.Console.WriteLine("Будний день");
+}
